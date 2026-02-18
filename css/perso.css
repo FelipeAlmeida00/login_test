@@ -10,7 +10,8 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-   
+    height: 100vh;
+    padding-top: 30px;
 }
 
 a {
@@ -36,6 +37,9 @@ nav {
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232e;
   height: 8vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 
@@ -148,3 +152,18 @@ nav {
 }
 
 
+main {
+  flex: 1;
+}
+
+footer{
+
+  background-color: #23232e;
+  
+  & .rodape{
+     color: aqua;
+     text-align: center;
+
+  }
+  
+}
