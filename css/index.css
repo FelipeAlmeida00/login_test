@@ -95,17 +95,20 @@ nav {
   transition: 0.3s;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
   body {
     overflow-x: hidden;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
+  
 
   .nav-list {
     position: absolute;
     top: 60px;
     right: 0;
-    width: 60vw;
+    width: 30vw;      /* mais estreito */
+    max-width: 260px; /* trava pra não crescer demais */
+    min-width: 200px; /* opcional: não fica fino demais */
     height: calc(100vh - 60px);
 
     background: #23232e;
