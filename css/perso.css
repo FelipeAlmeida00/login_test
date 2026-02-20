@@ -1,51 +1,79 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
-  
-}
-body{
-
-    background: url("../img/Outos/personagens.jpeg");
-     background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      min-height: 100vh;
-      width: 100%;
-      padding-top: 80px;
+  box-sizing: border-box;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
+/* ESTRUTURA PRINCIPAL */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background-color: rgb(154, 255, 255);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  width: 100%;
+  padding-top: 60px; /* altura da navbar */
 }
 
-a:hover {
-  opacity: 0.7;
+/* MAIN EMPURRA O FOOTER */
+main {
+  flex: 1;
+  padding-bottom: 40px; /* espaço antes do footer */
 }
 
-.logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+
+.principal{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
+
+.principal h2{
+    color: black;
+    font-size: 43px;
+}
+
+/* ================= NAVBAR ================= */
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
+
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232e;
-  height: 8vh;
+
+  height: 60px;
+  width: 100%;
+  
+
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+
+  z-index: 999;
 }
 
+.logo {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+  text-decoration: none;
+}
 
 .nav-list {
-  list-style: none;
+  align-items: center;
   display: flex;
 }
 
@@ -54,6 +82,20 @@ nav {
   margin-left: 32px;
   margin-top: 2%;
 }
+
+.nav-list a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  align-items: center;
+  line-height: 1;
+}
+
+.nav-list a:hover {
+  opacity: 0.7;
+}
+
+/* MENU MOBILE */
 
 .mobile-menu {
   display: none;
@@ -71,28 +113,32 @@ nav {
 @media (max-width: 999px) {
   body {
     overflow-x: hidden;
+    background-attachment: fixed;
   }
+
   .nav-list {
     position: absolute;
-    top: 8vh;
+    top: 60px;
     right: 0;
-    width: 30vw;
-    height: 92vh;
+    width: 60vw;
+    height: calc(100vh - 60px);
+
     background: #23232e;
+
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
+
   .nav-list li {
     margin-left: 0;
-    opacity: 0;
-    
   }
+
   .mobile-menu {
     display: block;
-    z-index: 10;
   }
 }
 
@@ -100,71 +146,19 @@ nav {
   transform: translateX(0);
 }
 
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
+/* ================= FOOTER ================= */
 
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
-}
-
-/* ⬇️ Endran ⬇️ */
-
-.nome1{
-
-  text-align: center;
-  margin-top: 2%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: black;
-  background-color: green;
-  border-radius: 15px;
-
-}
-
-
-.card-img1{
-
-  margin-top: 2%;
-
-}
-
-.card-text1{
-
-    text-align: center;
-    margin-top: 10px;
-    background-color: green;
-    color: #fff;
- 
-}
-
-
-main {
-  flex: 1;
-}
-
-footer{
-
+footer {
   background-color: #23232e;
-  
-  & .rodape{
-     color: aqua;
-     text-align: center;
+  padding: 2px;
+  text-align: center;
+}
 
-  }
-  
+footer p {
+  margin: 0;
+}
+
+footer .rodape {
+  color: aqua;
 }
