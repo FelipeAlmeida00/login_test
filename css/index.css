@@ -250,6 +250,7 @@ nav .img1 {
 }
 
 @media (max-width: 600px) {
+  .container-um,
   .container-dois,
   .container-tres {
     flex-direction: column;
