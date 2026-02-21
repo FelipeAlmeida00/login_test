@@ -10,15 +10,34 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
-  background-color: rgb(154, 255, 255);
+  background-color: green;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-
   width: 100%;
   padding-top: 60px; /* altura da navbar */
+}
+
+
+/*Menu com fundo nos itens*/
+
+header .nav-list a{ 
+    color: white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: 200ms; 
+}
+
+.nav-list .ativo{
+    color: green;
+    
+}
+
+header .ativo,header .none:hover{
+    color: green;
+    background-color: black;
+    
 }
 
 /* MAIN EMPURRA O FOOTER */
@@ -27,31 +46,17 @@ main {
   padding-bottom: 40px; /* espaço antes do footer */
 }
 
-
-.principal{
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.principal h2{
-    color: black;
-    font-size: 43px;
-}
-
 /* ================= NAVBAR ================= */
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-weight: bold;
   
 
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
+  background: black;
 
   height: 60px;
   width: 100%;
@@ -64,17 +69,16 @@ nav {
   z-index: 999;
 }
 
-.logo {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #fff;
-  text-decoration: none;
+nav .img1 {
+  height: 65px;
+  width: auto;
+  display: block;
 }
 
 .nav-list {
   align-items: center;
   display: flex;
+  list-style: none;
 }
 
 .nav-list li {
@@ -91,9 +95,7 @@ nav {
   line-height: 1;
 }
 
-.nav-list a:hover {
-  opacity: 0.7;
-}
+
 
 /* MENU MOBILE */
 
@@ -105,7 +107,7 @@ nav {
 .mobile-menu div {
   width: 32px;
   height: 2px;
-  background: #fff;
+  background: green;
   margin: 8px;
   transition: 0.3s;
 }
@@ -116,14 +118,37 @@ nav {
     background-attachment: fixed;
   }
 
+  header .nav-list a{
+    color: white;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: 200ms; 
+  }
+
+  .nav-list .ativo{
+      color: green;
+      
+  }
+
+  header .ativo,header .none:hover{
+    color: green;
+    background-color: black;
+    
+  }
+
+  .img1 { 
+    height: 45px;
+  }
+
   .nav-list {
     position: absolute;
     top: 60px;
     right: 0;
-    width: 60vw;
+    width: 30vw;
     height: calc(100vh - 60px);
-
-    background: #23232e;
+    max-width: 260px;
+    min-width: 200px;
+    background: black;
 
     flex-direction: column;
     align-items: center;
@@ -147,18 +172,54 @@ nav {
 }
 
 
+/* ================= TÍTULO ================= */
+
+.titulo {
+  text-align: center;
+  margin-top: 4%;  
+  background-color: black;
+  border-radius: 15px;
+  border: 1px solid green;
+
+  & h1{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+    margin: 3px;
+
+  }
+}
+
+
+/* ================= BOTÕES ================= */
+
+.principal{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.principal h2{
+    color: black;
+    font-size: 43px;
+}
 /* ================= FOOTER ================= */
 
 footer {
-  background-color: #23232e;
+  background-color: black;
   padding: 2px;
   text-align: center;
 }
 
 footer p {
   margin: 0;
+  font-weight: bold;
 }
 
 footer .rodape {
-  color: aqua;
+  color: green;
 }
+
