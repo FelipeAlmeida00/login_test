@@ -192,6 +192,7 @@ footer {
   background-color: black;
   padding: 2px;
   text-align: center;
+  z-index: 999;
 }
 
 footer p {
